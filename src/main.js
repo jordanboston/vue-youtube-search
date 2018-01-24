@@ -4,7 +4,6 @@ import Vue from 'vue';
 import App from './App';
 import Buefy from 'buefy';
 import axios from 'axios';
-import YouTubeSearch from 'youtube-api-search';
 
 Vue.use(Buefy, {
   defaultIconPack: 'fa',

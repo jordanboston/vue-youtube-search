@@ -1,21 +1,30 @@
-# vue-youtube
+# React version of YouTube Searchinator
 
-> A Vue.js project
+## Built from ReduxSimpleStarter
 
-## Build Setup
+This was the starter app from a tutorial by Stephen Grider.  The Vue.js app is based on the concepts in this one.
 
-``` bash
-# install dependencies
-npm install
+Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
-# serve with hot reload at localhost:8080
-npm run dev
+### Getting Started
 
-# build for production with minification
-npm run build
+There are two methods for getting started with this repo.
 
-# build for production and view the bundle analyzer report
-npm run build --report
+#### Familiar with Git?
+Checkout this repo, install dependencies, then start the gulp process with the following:
+
+```
+> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
+> cd ReduxSimpleStarter
+> npm install
+> npm start
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+#### Not Familiar with Git?
+Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+
+```
+> npm install
+> npm start
+```
+

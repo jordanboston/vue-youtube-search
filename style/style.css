@@ -1,0 +1,23 @@
+.search-bar input {
+	margin: 20px;
+	min-width: 75%
+}
+
+.search-bar img {
+	width: 64px;
+}
+
+.video-detail .details {
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.list-group-item {
+	cursor: pointer;
+}
+
+.list-group-item:hover {
+	background-color: #eee;
+}

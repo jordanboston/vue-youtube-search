@@ -12,7 +12,8 @@
 export default {
   data() {
     return {
-      searchTerm: 'surfing'
+      // Placholder text on init search
+      searchTerm: 'Surfing'
     }
   },
   methods: {

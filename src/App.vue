@@ -10,7 +10,7 @@
             <VideoDetail :selectedVideo="selectedVideo" :videos="videos" />
           </div>
           <div v-else>
-            <h4>...Loading</h4>
+            <h4>...Loading ⟳</h4>
           </div>
         </article>
       </div>

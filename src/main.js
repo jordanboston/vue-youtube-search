@@ -2,7 +2,6 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import App from './App';
-import _ from 'lodash';
 import Buefy from 'buefy';
 import 'buefy/lib/buefy.css';
 import axios from 'axios';

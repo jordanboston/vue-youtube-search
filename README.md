@@ -1,10 +1,9 @@
-# Vue YouTube Search
+# Vue YouTube Searchinator
 
-> A Vue.js project
+![youtube-searchinator](https://user-images.githubusercontent.com/1487071/35446254-fbe9d950-0268-11e8-9da3-56ab5d6c47c4.png)
+
 
 ## Build Setup
-
-
 
 ``` bash
 # Add config.js to src directory with

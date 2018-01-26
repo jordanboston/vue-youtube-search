@@ -1,19 +1,8 @@
 <template>
-  <div>
-    <ul class="">
-      <li @click="onVideoSelect(video)" class="">
-        <div class="video-list-media">
-          <div class="media-left">
-            <img class="media-object" :src="imgUrl" />
-          </div>
-
-          <div class="media-body">
-            <div class="media-heading">{{ videoTitle }}</div>
-          </div>
-        </div>
-      </li>
-		</ul>
-  </div>
+    <div class="tile is-child box" @click="onVideoSelect(video)">
+      <img :src="imgUrl" />
+      <p class="subtitle is-6">{{ videoTitle }}</p>
+    </div>
 </template>
 
 <script>
@@ -32,4 +21,7 @@ export default {
 </script>
 
 <style>
+  .tile.is-child:hover {
+    cursor: pointer;
+  }
 </style>

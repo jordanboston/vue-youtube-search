@@ -1,22 +1,30 @@
 <template>
-  <div id="app">
-    <SearchBar @termChange="videoSearch($event)" />
+  <div class="container">
+    <h1 class="title is-1">Vue YouTube Searchinator</h1>
+    <div class="tile is-ancestor">
 
-    <div v-if="show">
-      <VideoDetail :selectedVideo="selectedVideo" :videos="videos" />
-    </div>
-    <div v-else>
-      <h4>...Loading</h4>
-    </div>
-
-    <div class="columns">
-      <div class="column" v-for="video in videos" :key="video.etag">
-        <VideoList
-          @selectedVideo="videoSelect($event)"
-          :video="video"
-          :imgUrl="video.snippet.thumbnails.default.url"
-          :videoTitle="video.snippet.title" />
+      <div class="tile is-parent is-9">
+        <article class="tile is-child">
+          <SearchBar @termChange="videoSearch($event)" />
+          <div v-if="show">
+            <VideoDetail :selectedVideo="selectedVideo" :videos="videos" />
+          </div>
+          <div v-else>
+            <h4>...Loading</h4>
+          </div>
+        </article>
       </div>
+
+      <div class="tile is-parent is-3 is-vertical">
+        <article v-for="video in videos" :key="video.etag">
+          <VideoList
+            @selectedVideo="videoSelect($event)"
+            :video="video"
+            :imgUrl="video.snippet.thumbnails.medium.url"
+            :videoTitle="video.snippet.title" />
+        </article>
+      </div>
+
     </div>
   </div>
 </template>
@@ -65,4 +73,10 @@ export default {
 </script>
 
 <style>
+  .container p {
+    font-family: 'Open Sans', sans-serif;
+  }
+  h1.title, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+  }
 </style>

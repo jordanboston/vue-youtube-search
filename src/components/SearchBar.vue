@@ -1,8 +1,9 @@
 <template>
-  <div>
-    <div class="search-bar">
-      <input v-model="searchTerm" @change="searchTermChange"/>
+  <div class="field">
+    <div class="control">
+      <input class="input" type="text" v-model="searchTerm" @change="searchTermChange"/>
     </div>
+    <p class="help">Search Youtube for videos.</p>
   </div>
 </template>
 

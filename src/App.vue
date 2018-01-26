@@ -1,52 +1,41 @@
 <template>
-  <div class="container">
-    <div class="media">
-      <div class="media-left">
-        <figure class="image is-64x64">
-          <img src="./assets/logo.png" alt="Vue.js Logo">
-        </figure>
-      </div>
-      <div class="media-content">
-        <h1 class="title is-1">Vue YouTube Search
-          <b-icon
-            icon="youtube-play"
-            size="is-large"
-            type="is-black">
-          </b-icon>
-        </h1>
-      </div>
-    </div>
-    <div class="tile is-ancestor">
-
-      <div class="tile is-parent is-9">
-        <article class="tile is-child">
-          <SearchBar @termChange="videoSearch($event)" />
-          <div v-if="show">
-            <VideoDetail :selectedVideo="selectedVideo" :videos="videos" />
+  <div>
+    <Header />
+    <section class="section">
+      <div class="container">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent is-9">
+            <article class="tile is-child">
+              <SearchBar @termChange="videoSearch($event)" />
+              <div v-if="show">
+                <VideoDetail :selectedVideo="selectedVideo" :videos="videos" />
+              </div>
+              <div v-else>
+                <h4>...Loading ⟳</h4>
+              </div>
+            </article>
           </div>
-          <div v-else>
-            <h4>...Loading ⟳</h4>
+          <div class="tile is-parent is-3 is-vertical">
+            <article v-for="video in videos" :key="video.etag">
+              <VideoList
+                @selectedVideo="videoSelect($event)"
+                :video="video"
+                :imgUrl="video.snippet.thumbnails.medium.url"
+                :videoTitle="video.snippet.title" />
+            </article>
           </div>
-        </article>
-      </div>
-
-      <div class="tile is-parent is-3 is-vertical">
-        <article v-for="video in videos" :key="video.etag">
-          <VideoList
-            @selectedVideo="videoSelect($event)"
-            :video="video"
-            :imgUrl="video.snippet.thumbnails.medium.url"
-            :videoTitle="video.snippet.title" />
-        </article>
-      </div>
-
-    </div>
+        </div>
+      </div> <!-- /.container -->
+    </section>
+    <Footer />
   </div>
 </template>
 
 <script>
 import { YOUTUBE_API_KEY } from './config';
 import YouTubeSearch from 'youtube-api-search';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
 import VideoDetail from './components/VideoDetail';
@@ -62,6 +51,8 @@ export default {
     }
   },
   components: {
+    Header,
+    Footer,
     SearchBar,
     VideoList,
     VideoDetail,
@@ -90,8 +81,5 @@ export default {
 <style>
   .container p {
     font-family: 'Open Sans', sans-serif;
-  }
-  h1.title, h2, h3 {
-    font-family: 'Raleway', sans-serif;
   }
 </style>

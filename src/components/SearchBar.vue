@@ -1,9 +1,10 @@
 <template>
   <div class="field">
-    <div class="control">
-      <input class="input" type="text" v-model="searchTerm" @input="searchTermChange" />
+    <div class="control has-icons-left">
+      <input class="input is-success" type="text" v-model="searchTerm" @input="searchTermChange" />
+      <b-icon icon="magnify"></b-icon>
     </div>
-    <p class="help">Search Youtube for videos.</p>
+    <p class="help">Search YouTube videos.</p>
   </div>
 </template>
 

@@ -7,7 +7,13 @@
         </figure>
       </div>
       <div class="media-content">
-        <h1 class="title is-1">Vue YouTube Search</h1>
+        <h1 class="title is-1">Vue YouTube Search
+          <b-icon
+            icon="youtube-play"
+            size="is-large"
+            type="is-black">
+          </b-icon>
+        </h1>
       </div>
     </div>
     <div class="tile is-ancestor">

@@ -13,6 +13,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "buefy": "^0.6.2",
+    "lodash": "^4.17.4",
     "vue": "^2.5.2",
     "youtube-api-search": "0.0.5"
   },

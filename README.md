@@ -14,9 +14,9 @@ add this to your own **config.js** _(gitignored)_ file in the src directory with
 
     export const YOUTUBE_API_KEY = 'YOUR API KEY HERE';
 
-Install dependencies
+Then install dependencies
 
-    npm install
+    npm i
 
 Serve with hot reload at localhost:8081
 

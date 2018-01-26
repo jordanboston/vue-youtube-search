@@ -1,6 +1,15 @@
 <template>
   <div class="container">
-    <h1 class="title is-1">Vue YouTube Searchinator</h1>
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-64x64">
+          <img src="./assets/logo.png" alt="Vue.js Logo">
+        </figure>
+      </div>
+      <div class="media-content">
+        <h1 class="title is-1">Vue YouTube Search</h1>
+      </div>
+    </div>
     <div class="tile is-ancestor">
 
       <div class="tile is-parent is-9">

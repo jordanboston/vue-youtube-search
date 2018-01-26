@@ -2,7 +2,11 @@
 
 ## Built from ReduxSimpleStarter
 
-This was the starter app from a tutorial by Stephen Grider.  The Vue.js app is based on the concepts in this one.
+https://github.com/StephenGrider/ReduxSimpleStarter
+
+This was the starter app from a tutorial by Stephen Grider.  This branch contains my version of the React app from the tutorial.  The Vue.js app is based on the concepts in this one.
+
+---
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 

@@ -1,7 +1,7 @@
 <template>
   <div class="field">
     <div class="control">
-      <input class="input" type="text" v-model="searchTerm" @change="searchTermChange"/>
+      <input class="input" type="text" v-model="searchTerm" @input="searchTermChange"/>
     </div>
     <p class="help">Search Youtube for videos.</p>
   </div>
